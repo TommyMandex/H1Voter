@@ -247,7 +247,8 @@ def _exec_():
 					 		vn=stx.Green
 
 					 	print (vn+'['+uid+'] ['+reportsTitles[len(reportsTitles)-1]+']')
-		
+		else :
+			print stx.yel+'['+uid+'] is '+stx.RED+'invalid or not available '+stx.yel+'yet\n'+stx.yel
 	reports=validreports
 	if len(reports) < 1:
 		print(stx.RED+'No valid/public reports to vote on\n Leaving..'+stx.White)
@@ -368,19 +369,22 @@ def _exec_():
 				r6=requests.post(url=urlfinal,headers=h6,allow_redirects=False)##,proxies=proxyDict)
 				temp=r6.text
 				justf=''
+				indxer='['+str(repcounter+1)+']'
+				if len(reports) <2:
+					indxer=''
 				if repcounter<1:				
 					justf='[F]'
 				if '{"vote_id":' in temp:
-					print(stx.Blue+justf+'     ['+str(repcounter+1)+']  +Voting result : '+stx.Green+'[Voting on '+str(repid)+' Succeeded]')
+					print(stx.Blue+justf+'     ['+indxer+']  +Voting result : '+stx.Green+'[Voting on '+str(repid)+' Succeeded]')
 					onevotesend=True
 					done[repcounter] =done[repcounter]+1
 				elif '{"report":["user already voted"]}' in temp:
-						print(stx.Blue+justf+'     ['+str(repcounter+1)+']  +Voting result : '+stx.magenta+'[Already voted before on '+str(repid)+']')
+						print(stx.Blue+justf+'     '+indxer+'  +Voting result : '+stx.magenta+'[Already voted before on '+str(repid)+']')
 				elif '{"status":"404","error":"Not Found"}' in temp:
-					print(stx.Blue+justf+'     ['+str(repcounter+1)+'] +Voting result : Unavailable report ['+str(repid)+']')
+					print(stx.Blue+justf+'     '+indxer+' +Voting result : Unavailable report ['+str(repid)+']')
 
 				else:
-					print(stx.White+justf+" ["+str(repcounter+1)+"] +Voting on "+str(repid)+stx.RED+"[ Failed ] "+stx.Green)
+					print(stx.White+justf+" "+indxer+" +Voting on "+str(repid)+stx.RED+"[ Failed ] "+stx.Green)
 					invalidIds.append(ids[counter])
 					alldone=0
 					breakreports=True

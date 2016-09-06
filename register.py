@@ -91,34 +91,39 @@ ids=''
 end=f+t
 v ={477,433,441,353,346,344,324,294,260,454,248,213,215,201,210,202,200,196,88,89,90,44,69,53}
 for u in range(f,end):
-	s=name+str(u)
-	print(stx.yel+'Registering with ['+s+'@'+ea+']')
-	da="user[name]=Egy+Bots&user[username]="+s+"&1=iiiiiiiiiiiiiiiiiiiiiiii&user[email]="+s+"%40"+ea+"&user[password]="+pas+"&user[password_confirmation]="+pas
-	r =requests.post(url=url,data=da,headers=h)#,proxies=proxyDict)
-	usernameemailstatue=''
-	if 'been taken' in r.text:
-		if 'username'in r.text:
-			usernameemailstatue='    Username Reserved '
-		if 'email' in r.text:
-			usernameemailstatue = usernameemailstatue+'\n    Email : registered before\n'
-		print(stx.RED+usernameemailstatue)
+	reg=False
+	while reg ==False:
+		s=name+str(u)
+		print(stx.yel+'Registering with ['+s+'@'+ea+']')
+		da="user[name]=Egy+Bots&user[username]="+s+"&1=iiiiiiiiiiiiiiiiiiiiiiii&user[email]="+s+"%40"+ea+"&user[password]="+pas+"&user[password_confirmation]="+pas
+		r =requests.post(url=url,data=da,headers=h)#,proxies=proxyDict)
+		usernameemailstatue=''
+		if 'been taken' in r.text:
+			if 'username'in r.text:
+				usernameemailstatue='    Username Reserved '
+			if 'email' in r.text:
+				usernameemailstatue = usernameemailstatue+'\n    Email : registered before\n'
+			print(stx.RED+usernameemailstatue)
+			reg=True
 		
-	elif  'redirect_path":"/users/sign_in","errors":{}}' in r.text :
-		print stx.Green+'Regestered succeeded  ['+s+"]\n"
-		#x.append(s)
-		ids=s+'@'+ea+':'+pas+'\n'
-	elif 'later' in r.text:
-		print stx.RED+'Detected Retring in 5 seconds'
-		time.sleep(5)
+		elif  'redirect_path":"/users/sign_in","errors":{}}' in r.text :
+			print stx.Green+'Regestered succeeded  ['+s+"]\n"
+			#x.append(s)
+			reg =True
+			ids=s+'@'+ea+':'+pas+'\n'
+		elif 'later' in r.text:
+			print stx.RED+'Detected Retring in 5 seconds'
+			time.sleep(5)
+			reg=False
 
-	elif 'redirect_path":"/users/sign_in","errors":{}}' in r.text:
-		print ("invalid password Please enter a strong one ")
-		exit()
-	elif '8 characters)","does not contain enough entropy. Pick a more secure password' in r.text:
-		print('weak password try one like "aAbBcC123!!!"\n') 
-		exit()
-	else:
-		print r.text
+		elif 'redirect_path":"/users/sign_in","errors":{}}' in r.text:
+			print ("invalid password Please enter a strong one ")
+			exit()
+		elif '8 characters)","does not contain enough entropy. Pick a more secure password' in r.text:
+			print('weak password try one like "aAbBcC123!!!"\n') 
+			exit()
+		else:
+			print r.text
 	if f!=end:	
 		time.sleep(3)
 rand=datetime.datetime.now()

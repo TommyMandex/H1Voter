@@ -1,0 +1,41 @@
+POST /olx/reports HTTP/1.1
+Host: hackerone.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:48.0) Gecko/20100101 Firefox/48.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+X-CSRF-Token: QI9aWxovNVrVKdP1DagZGzxT6SLqqWqy9rfhE+fc8sJLwt4fe9vIimqUwTAiATXBaBuKF20rLRRWRXrhR4lDZA==
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Referer: https://hackerone.com/olx/reports/new
+Content-Length: 703
+Cookie: __cfduid=d1cdfc0b504bd870dc94c5509a2f41bd71472917466; _ga=GA1.2.1635264352.1472917475; __Host-session=MG9ZRURQNmNVY1lTMGhDUTJYS3o3aUNzM1NJQlE1dDcvYnRER2lsK0VtbjNVL2Jud1FKK3FodzlJeGF0QXdiVUxzdGJPRFFLV1VkZWJwbUNjQUZTY3h6SVRLd0svNnNwZDhJZ28zS0tQZTJNSHc4OFFaT3JMU211Z25vcUMwK28xYk9pWmIxN2x4SDMxK3RIQXNpenNqNC8yVVFubnRjQ05BSU5FVTZISjMzVC9ESVJuWkF2S2pqTlB5Rlg4YzluM0JiSWdVZmlCMmNTNTZTb1hrTlBuaDlmR1hZYVhVcHpMRnBlOElPaFIzV2JqZmYrYWJSbVl5YkhjOWdpRlhkaXByYlphRnora3d0NjVPZDZFbG1LVXBiaDZVTmhRYVQzdVA2VXNWdDBBUEFrRmRSMFpvSERwV1duZy9nTDAwVzI2WkF6ZjEzQW56UFFKdzFOQmV1aE82NGQzWGFTOFFITEQzbUZMWDJEUHRlbGxXTk9qQ1JkaTduWFh3dkNYKzRKaXRocHl4QnM4UjNXTG0rSVpXbUhrRUVtRXhFVnFWNXQ4RVZzRGtlS1JYLy9rcDFFWXBpMXB6allBYVVWeXNmZlVUZWtOS0k0MDNsOVFpaC8raFY1RWN0OSt0Sk04RVdmMkw5TGtNSHdUaUZlRGFWTWNONUpabnZuS0M0ZjVrRERlVFpUVS9MWEZkbUd0ci84a1hwQlE1aXlMTEJJUWhJNTBjMnJ4YldlLzVvSUIwcEZ0ZEhPVk1sTVVrd3NVbjd0LS1vQzI1bGdkcWh2U3BWeENBSmx0aGVBPT0%3D--a129629d6f3b9546c2c5ee202e8bf0197f20d4f1; __Host-remember_me_token=BAhbCFsGaQNKngFJIhlzdXdVMzlVaEdBMXpZN3dhdWg3SgY6BkVGSSIWMTQ3MzE0NDMzMC40MDIyOTEGOwBG--68a3a7f4bc8e9a1398b01a3711e75b55af396514
+Connection: close
+
+report%5Btitle%5D=%5BCritical%5D+Remote+code+Execution+in+subdomain+&report%5Bvulnerability_information%5D=Hi+guys+%0A%0AThis+is+not+very+indeed+vulnerability+%2C+a+bad+guy+has+created+some+bots+%2C+and+used+a+tool+Called+H1Voter+to+disturb+you+with+spammy+report.%0A%0AThis+is+not++completely+useless+%2C+because+it+tells+that+your+system+is+secured+%3AD+%0A%0ASo+he+decided+to+send+you+some+flowers++%0A!%5BCheck+it%5D(http%3A%2F%2Fmedia.gq.com%2Fphotos%2F565ec80b763696e2290d23fc%2Fmaster%2Fpass%2FGQ%2520Ass%2520Care%2520Tout%25201203.jpg)%0A%0AYou+are+safe+%3AD%0ADo+not+forget+to+close+as+N%2FA%0A%0AAnonymous+Bots+%0A++++Y!G&report%5Bvulnerability_type_ids%5D%5B%5D=118595&report%5Bforce%5D=false
+
+
+
+
+report[title]=[Critical] Remote code Execution in subdomain &report[vulnerability_information]=Hi guys 
+
+This is not very indeed vulnerability , a bad guy has created some bots , and used a tool Called H1Voter to disturb you with spammy report.
+
+This is not  completely useless , because it tells that your system is secured :D 
+
+So he decided to send you some flowers  
+![Check it](http://media.gq.com/photos/565ec80b763696e2290d23fc/master/pass/GQ%20Ass%20Care%20Tout%201203.jpg)
+
+You are safe :D
+Do not forget to close as N/A
+
+Anonymous Bots 
+    Y!G&report[vulnerability_type_ids][]=118595&report[force]=false
+
+
+
+
+    200 ok 
+
+    
+{"redirect":"/bugs?report_id=166056\u0026subject=user","report_id":166056}
