@@ -5,7 +5,8 @@
 import requests,os,urllib,sys,datetime,time
 requests.packages.urllib3.disable_warnings()
 
-#Reg 0 : 1250
+#Reg 0 : 1250  
+
 #unconfirmed 770 : 790
 
 print('No finished')

@@ -91,7 +91,7 @@ print'\n -----------------------------------------------------------------------
 print(stx.Blue+'\n 				Starting registeration\n'+stx.yel)
 ids=''
 end=f+t
-v ={477,433,441,353,346,344,324,294,260,454,248,213,215,201,210,202,200,196,88,89,90,44,69,53}
+
 for u in range(f,end):
 	reg=False
 	while reg ==False:

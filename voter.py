@@ -199,6 +199,7 @@ def load():
 	print("Requested Voted    ["+str(votes)+"]")
 	print '\n'
 	h=0
+	
 	with open(idsPath) as strm:
 		lines=strm.readlines()
 		del ids[:]
