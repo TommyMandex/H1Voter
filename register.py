@@ -66,6 +66,8 @@ if len(ea) ==0:
 elif '.' not in ea:
 	print 'Invalid email domain name\n 		Valid example: "yopmail.com"'
 	exit()
+
+sufx=raw_input('\nIf you want to add sufx type it :')
 ty=raw_input(stx.magenta+'\n If you want to add new  cookis \n paste it  , if not press Enter :')
 if len(ty) >0:
 	cokstr=ty
@@ -93,7 +95,7 @@ v ={477,433,441,353,346,344,324,294,260,454,248,213,215,201,210,202,200,196,88,8
 for u in range(f,end):
 	reg=False
 	while reg ==False:
-		s=name+str(u)
+		s=name+str(u)+sufx
 		print(stx.yel+'Registering with ['+s+'@'+ea+']')
 		da="user[name]=Egy+Bots&user[username]="+s+"&1=iiiiiiiiiiiiiiiiiiiiiiii&user[email]="+s+"%40"+ea+"&user[password]="+pas+"&user[password_confirmation]="+pas
 		r =requests.post(url=url,data=da,headers=h)#,proxies=proxyDict)
@@ -107,7 +109,7 @@ for u in range(f,end):
 			reg=True
 		
 		elif  'redirect_path":"/users/sign_in","errors":{}}' in r.text :
-			print stx.Green+'Regestered succeeded  ['+s+"]\n"
+			print stx.Green+'Register  succeeded  ['+s+"]\n"
 			#x.append(s)
 			reg =True
 			ids=s+'@'+ea+':'+pas+'\n'
