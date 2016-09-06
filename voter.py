@@ -220,9 +220,9 @@ def load():
 	print(stx.Blue+"Loading accounts.....")
 	print("Found accounts :"+str(len(ids)))
 	if len(ids) <1 :
-		print(stx.RED+'\n 	The file does not have any valid accounts\n'+stx.Green)
+		print(stx.RED+'\n 	The file does not have any valid accounts'+stx.Green)
 		if h >0: 
-			print('		Ignored accountes = '+str(h))
+			print('		Ignored accountes = '+str(h)+stx.yel)
 		exit()
 
 def _exec_():
