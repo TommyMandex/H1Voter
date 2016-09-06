@@ -1,0 +1,23 @@
+Get signin  < cooki1
+
+
+
+current_user 
+cooki1            < cooki3 , token1
+
+
+POST session 
+cookie3     < cooki4
+token1
+
+
+
+POST signin 
+cooki4
+
+
+Get curnt_user  < token2
+
+
+POST votes 
+token2

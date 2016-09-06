@@ -1,0 +1,14 @@
+POST /users/sign_in HTTP/1.1
+Host: hackerone.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: https://hackerone.com/users/sign_in
+Cookie:  __Host-session=RTNraWI2Qk9QU0NqOVRHQ0x4Sks2TVp0VFF5bVMyWkpkckQzNXRtcTNaa2lkWGY2MUd1QUFRL01NcUxURlkvK2REZ05neFhBTGl1c3ZkOTAzVkNCdmdLVzZWaWZ3V1lqTzlXcVYyd3lqSEJCQ0U5c0JpZDVuV1ZrQ2pWWlJpYTdLY3RkWjVrc1JBdUxpUVlDeXdWU2lHckZFNktVTXE1MW1odmJ3MWs1ZnFENytHMmRLbnpFNmdWV1ZPT2M4SGFkLS1FV0RlTUVhUU9nTzdCMnNGT0hHTklBPT0%3D--6a0e87c14fafd1436a28ac79fea833608859dfc8;
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+X-CSRF-Token: +jDeYKawdBQ/tUxzeHBUy66dQKPgmSj56kUehTOJ31d7/JYqOjMHS8LZgxejADIoCx5PU51R58tzOWq+CYJmnQ==
+Content-Length: 84
+
+user%5Bemail%5D=MrexceptionBot99%40yopmail.com&user%5Bpassword%5D=123%21%40%23qweQWE

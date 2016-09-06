@@ -1,0 +1,15 @@
+POST /sessions HTTP/1.1
+Host: hackerone.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+X-CSRF-Token: +jDeYKawdBQ/tUxzeHBUy66dQKPgmSj56kUehTOJ31d7/JYqOjMHS8LZgxejADIoCx5PU51R58tzOWq+CYJmnQ==
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Referer: https://hackerone.com/users/sign_in
+Content-Length: 119
+Cookie: __Host-session=WjhDaXZ6N0hwZkEwc1prcU1Hdk1QaisxU2V3em93U3FQOVRNZE5BNHpLbUxWK04wazVIMHZ2VHlsMFdPalo2aGNHNzRqcWlucm5mMVJyekI5Nnhta3VZZ0VDV2lQYVlHYUxlbkxUNURGeWd0YmMrSTA2c0l6UFB3c3gvUEJna1puRmpvNjNxc2lLODhjUUtNTW56dHlPY29GeEZQTlNqZnFoRWZvR1Bpd2toeUc3K0wwMmVFdDAzeVpuRkVHUzVKLS1GeHpYalFyeXFJMTB2RklxWDViRW13PT0%3D--33a67b5de87b98c0e2958ef1cc3dab582eb4b1c3;
+Connection: close
+
+email=MrexceptionBot99@yopmail.com&password=123!@#qweQWE&remember_me=false&fingerprint=74c0253e20c0b504f19059121e6c3a32
