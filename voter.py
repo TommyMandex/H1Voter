@@ -198,17 +198,20 @@ def load():
 	print("Starting from      ["+str(startindex) +"]")
 	print("Requested Voted    ["+str(votes)+"]")
 	print '\n'
+	h=0
 	with open(idsPath) as strm:
 		lines=strm.readlines()
 		del ids[:]
 		del passwords[:]		
 		for l in lines:
-			if l.startswith('#'):
-				continue
 			if ':' in l :
-				tempids=l.split(':')
-				ids.append(tempids[0].strip())
-				passwords.append(tempids[1].strip())
+				if l.startswith('#'):
+					h=h+1
+					continue
+				else:
+					tempids=l.split(':')
+					ids.append(tempids[0].strip())
+					passwords.append(tempids[1].strip())
 	
 
 	if len(ids) < votes :
@@ -216,6 +219,11 @@ def load():
 	startindex=int(startindex)
 	print(stx.Blue+"Loading accounts.....")
 	print("Found accounts :"+str(len(ids)))
+	if len(ids) <1 :
+		print(stx.RED+'\n 	The file does not have any valid accounts\n'+stx.Green)
+		if h >0: 
+			print('		Ignored accountes = '+str(h))
+		exit()
 
 def _exec_():
 	
