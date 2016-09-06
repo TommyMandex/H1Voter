@@ -139,8 +139,6 @@ def load():
 		    	leavewithnotexistedfile()
 		    else:
 		    	trydownload(False)
-			
-
 		
 		reports_string=sys.argv[2]
 		del reports[:]
@@ -205,6 +203,8 @@ def load():
 		del ids[:]
 		del passwords[:]		
 		for l in lines:
+			if l.startswith('#'):
+				continue
 			if ':' in l :
 				tempids=l.split(':')
 				ids.append(tempids[0].strip())
