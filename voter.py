@@ -98,7 +98,7 @@ def leaveusage():
 	else :
 		print(stx.RED+"""+
 		+Usage python voter.py  file.txt   <ids>        votesCount
-		       python voter.py  list.txt 162533,154325    20 
+		       python voter.py  list.txt 158872,154325    20 
 								 """+stx.Green+"'add many reports separated by comma'\n type 'python voter.py download' to get list of bots """+stx.Green)
 	exit()
 def downloadlist():
@@ -199,7 +199,7 @@ def load():
 	print("Requested Voted    ["+str(votes)+"]")
 	print '\n'
 	h=0
-	
+
 	with open(idsPath) as strm:
 		lines=strm.readlines()
 		del ids[:]
