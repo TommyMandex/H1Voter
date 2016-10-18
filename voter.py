@@ -3,9 +3,14 @@
 import requests,os,urllib,sys,datetime,time
 requests.packages.urllib3.disable_warnings()
 
+forceVote=True
 #Reg 0 : 1250
 #unconfirmed 770 : 790
 
+def DetectCloudFlare(r):
+	if 'px;">DDoS protection by CloudFlare</a>' in r:
+		return True
+	return False
 os.system('rm -rf errors')
 class stx:    
 	RED='\033[1;31m'
@@ -103,7 +108,14 @@ def leaveusage():
 	exit()
 def downloadlist():
 	urlpasswords='https://gist.githubusercontent.com/YasserGersy/8f1a4713c5c02c64b4106471f3917972/raw/91da23cfbe754163f00d188a057b083dd2f2c00d/H1_Bots.txt'
-	req=requests.get(url=urlpasswords,allow_redirects=False)			
+	reqdone=False
+	while reqdone==False:#
+		req=requests.get(url=urlpasswords,allow_redirects=False)
+		reqdone=True
+		if DetectCloudFlare(req.text):
+			reqdone=False
+			print('Sleeping for cloud flare')
+			time.sleep(5)
 	if 'yopmail' in req.text:
 		strm=open('list.txt','w')
 		strm.write(req.text)
@@ -238,24 +250,36 @@ def _exec_():
 	print stx.Green+'\nChecking ids ....'
 	for uid in reports:
 		reporturl='https://hackerone.com/reports/'+str(uid)
-		rep_req=requests.get(reporturl,headers=h,allow_redirects=False)#,proxies=proxyDict)
 		
-		if rep_req.status_code ==200:
-			if uid not in validreports:
+		reqdone=False
+		while reqdone==False:#
+			rep_req=requests.get(reporturl,headers=h,allow_redirects=False)#,proxies=proxyDict)
+			reqdone=True
+			if DetectCloudFlare(rep_req.text):
+				reqdone=False
+				print('Sleeping for cloud flare')
+				time.sleep(5)
+
+		
+		if rep_req.status_code ==200 or forceVote:
+			if uid not in validreports or forceVote:
 				validreports.append(uid)
 				done.append(0)
 				tit=''
 				if len(rep_req.text ) > 350 :
-					 f = rep_req.text.split('<meta property="og:title" content=')
-					 if 'disclosed on HackerOne' in f[1]:
-					 	
-					 	f5=f[1].split(':')[1].split('"/>')[0]
-					 	reportsTitles.append(f5[:-25])
-					 	vn=stx.Blue
-					 	if len(reportsTitles) % 2==0:
-					 		vn=stx.Green
+					f = rep_req.text.split('<meta property="og:title" content=')
+					try:	
+						 if 'disclosed on HackerOne' in f[1]:
+						 	
+						 	f5=f[1].split(':')[1].split('"/>')[0]
+						 	reportsTitles.append(f5[:-25])
+						 	vn=stx.Blue
+						 	if len(reportsTitles) % 2==0:
+					 			vn=stx.Green
 
-					 	print (vn+'['+uid+'] ['+reportsTitles[len(reportsTitles)-1]+']')
+						 	print (vn+'['+uid+'] ['+reportsTitles[len(reportsTitles)-1]+']')
+					except Exception:
+						some=2
 		else :
 			print stx.yel+'['+uid+'] is '+stx.RED+'invalid or not available '+stx.yel+'yet\n'+stx.yel
 	reports=validreports
@@ -291,9 +315,21 @@ def _exec_():
 		while alldone==0:
 			alldone=1
 			hostsession=csrf_value=''
+			
 			s1=requests.session()
 			s1.headers.update({"User-Agent":userAgentH,"Accept":acceptH,"Accept-Language":AcceptLanguageH})
-			r1=s1.get(url1)
+			
+			reqdonex=False
+			while reqdonex==False:#
+				r1=s1.get(url1) 
+				reqdonex=True
+				if DetectCloudFlare(r1.text):
+					reqdonex=False
+					print('Sleeping for cloud flare')
+					time.sleep(5)
+
+			
+			
 			cok=r1.headers['Set-Cookie']
 			hostsession=extract_sess_from_Cookie(cok)
 			if hostsession == '':
@@ -302,7 +338,18 @@ def _exec_():
 
 			s2=requests.session()
 			s2.headers.update({"User-Agent":userAgentH,"Accept":acceptH,"Accept-Language":AcceptLanguageH,'X-Requested-With':xreqwith,'Cookie':hostsession})
-			r2=s2.get(url2)
+			
+
+			reqdonex=False
+			while reqdonex==False:#:
+				r2=s2.get(url2)
+				reqdonex=True
+				if DetectCloudFlare(r2.text):
+					reqdonex=False
+					print('Sleeping for cloud flare')
+					time.sleep(5)
+
+
 			cok2=r2.headers['Set-Cookie']
 			hostsession=extract_sess_from_Cookie(cok2)
 			csrf_value=extract_csrf_tok_from_json(r2.text)
@@ -317,7 +364,17 @@ def _exec_():
 			r3done=0
 			while r3done==0:
 				r3done=1+r3done
+				
+			reqdonex=False
+			while reqdonex==False:#:
 				r3=requests.post(url=url3,data=bodyStr3,headers=h3)
+				reqdonex=True
+				if DetectCloudFlare(r3.text):
+					reqdonex=False
+					print('Sleeping for cloud flare')
+					time.sleep(5)
+
+
 				cok3=r3.headers['Set-Cookie']			
 				hostsession=extract_sess_from_Cookie(cok3)
 
@@ -347,7 +404,16 @@ def _exec_():
 			body4={'authenticity_token':csrf_value,'user[email]':ids[counter],'user[password]':passwords[counter]}
 			bodyStr4=urllib.urlencode(body4)
 	
-			r4=requests.post(url=url4,data=bodyStr4,headers=h4,allow_redirects=False)
+			reqdonex=False
+			while reqdonex==False:#:
+				r4=requests.post(url=url4,data=bodyStr4,headers=h4,allow_redirects=False)
+				reqdonex=True
+				if DetectCloudFlare(r4.text):
+					reqdonex=False
+					print('Sleeping for cloud flare')
+					time.sleep(5)
+
+
 			cok4=r4.headers['Set-Cookie']
 			hostsession=extract_sess_from_Cookie(cok4)
 			if 'm/hacktivity">redirected' in r4.text:
@@ -358,7 +424,16 @@ def _exec_():
 
 
 			h5={"User-Agent":userAgentH,'x-requested-with': 'XMLHttpRequest',"Accept":acceptH,"Accept-Language":AcceptLanguageH,'X-CSRF-Token':csrf_value,'Content-Type':conttypeH,'Referer':'https://hackerone.com/login',	    'Cookie':hostsession}
-			r5=requests.get(url=url5,headers=h5,allow_redirects=False)##,proxies=proxyDict)
+			
+			reqdonex=False
+			while reqdonex==False:#:
+				r5=requests.get(url=url5,headers=h5,allow_redirects=False)##,proxies=proxyDict)
+				reqdonex=True
+				if DetectCloudFlare(r5.text):
+					reqdonex=False
+					print('Sleeping for cloud flare')
+					time.sleep(5)
+
 			csrf_value=extract_csrf_tok_from_json(r5.text)
 			st =   '[E]   +Requesting New Token:'
 			if '{"csrf_token":"' in r5.text:
@@ -375,7 +450,16 @@ def _exec_():
 			for repid in reports:
 				repcounter=repcounter+1
 				urlfinal='https://hackerone.com/reports/'+str(repid)+'/votes'
+				
+			reqdonex=False
+			while reqdonex==False:#:
 				r6=requests.post(url=urlfinal,headers=h6,allow_redirects=False)##,proxies=proxyDict)
+				reqdonex=True
+				if DetectCloudFlare(r5.text):
+					reqdonex=False
+					print('Sleeping for cloud flare')
+					time.sleep(5)
+
 				temp=r6.text
 				justf=''
 				indxer='['+str(repcounter+1)+']'
