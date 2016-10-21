@@ -7,6 +7,8 @@ forceVote=True
 #Reg 0 : 1250
 #unconfirmed 770 : 790
 
+
+
 def DetectCloudFlare(r):
 	if 'px;">DDoS protection by CloudFlare</a>' in r:
 		return True
@@ -24,11 +26,33 @@ class stx:
 	crims=' \033[1;38m'
 	magenta='\033[1;35m'									
 	lin='\n---------------------------------------------------------------------------------\n'
-
+	ses_Value_sep=' ----=---- '
+	ses_member_sep=';;;;\n:'
+	sess_separator='\n\n-------------jerx------------\n\n'
 
 proxyDict = { "http"  : "http://127.0.0.1:8080", "https" : "https://127.0.0.1:8080",   "ftp"   : "ftp://127.0.0.1:8080"}
 
-
+def serializeHeaders(h):
+	z=''
+	for k in h:
+		z=z+k+':'+h[k]+'\n'
+	return z
+def serializeSession(dic):
+	data=''
+	for k in dic:
+		data=data+k+stx.ses_Value_sep+dic[k]+stx.ses_member_sep
+	data=data+stx.sess_separator
+	return data
+def storeSess(s):
+	sessionFile='sessions.ser'
+	old=''
+	if os.path.isfile(sessionFile):
+		with open(sessionFile) as read:
+			old=read.read()
+	data=old+serializeSession(s)
+	writer=open(sessionFile,'w') 
+	writer.write(data)
+	writer.close()
 
 def extract_csrf_tok_from_json(body):
 	try:
@@ -109,13 +133,16 @@ def leaveusage():
 def downloadlist():
 	urlpasswords='https://gist.githubusercontent.com/YasserGersy/8f1a4713c5c02c64b4106471f3917972/raw/91da23cfbe754163f00d188a057b083dd2f2c00d/H1_Bots.txt'
 	reqdone=False
-	while reqdone==False:#
-		req=requests.get(url=urlpasswords,allow_redirects=False)
-		reqdone=True
-		if DetectCloudFlare(req.text):
-			reqdone=False
-			print('Sleeping for cloud flare')
-			time.sleep(5)
+	while reqdone==False :#
+		try:
+			req=requests.get(url=urlpasswords,allow_redirects=False)
+			reqdone=True
+			if DetectCloudFlare(req.text):
+				reqdone=False
+				print('Sleeping for cloud flare')
+				time.sleep(5)
+			except Exception:
+				reqdone=False
 	if 'yopmail' in req.text:
 		strm=open('list.txt','w')
 		strm.write(req.text)
@@ -253,13 +280,15 @@ def _exec_():
 		
 		reqdone=False
 		while reqdone==False:#
-			rep_req=requests.get(reporturl,headers=h,allow_redirects=False)#,proxies=proxyDict)
-			reqdone=True
-			if DetectCloudFlare(rep_req.text):
+			try:
+				rep_req=requests.get(reporturl,headers=h,allow_redirects=False)#,proxies=proxyDict)
+				reqdone=True
+				if DetectCloudFlare(rep_req.text):
+					reqdone=False
+					print('Sleeping for cloud flare')
+					time.sleep(5)
+			except Exception:
 				reqdone=False
-				print('Sleeping for cloud flare')
-				time.sleep(5)
-
 		
 		if rep_req.status_code ==200 or forceVote:
 			if uid not in validreports or forceVote:
@@ -321,13 +350,15 @@ def _exec_():
 			
 			reqdonex=False
 			while reqdonex==False:#
-				r1=s1.get(url1) 
-				reqdonex=True
-				if DetectCloudFlare(r1.text):
+				try:
+					r1=s1.get(url1) 
+					reqdonex=True
+					if DetectCloudFlare(r1.text):
+						reqdonex=False
+						print('Sleeping for cloud flare')
+						time.sleep(5)
+				except Exception:
 					reqdonex=False
-					print('Sleeping for cloud flare')
-					time.sleep(5)
-
 			
 			
 			cok=r1.headers['Set-Cookie']
@@ -341,14 +372,16 @@ def _exec_():
 			
 
 			reqdonex=False
-			while reqdonex==False:#:
-				r2=s2.get(url2)
-				reqdonex=True
-				if DetectCloudFlare(r2.text):
+			while reqdonex==False :#:
+				try:
+					r2=s2.get(url2)
+					reqdonex=True
+					if DetectCloudFlare(r2.text):
+						reqdonex=False
+						print('Sleeping for cloud flare')
+						time.sleep(5)
+				except Exception:
 					reqdonex=False
-					print('Sleeping for cloud flare')
-					time.sleep(5)
-
 
 			cok2=r2.headers['Set-Cookie']
 			hostsession=extract_sess_from_Cookie(cok2)
@@ -367,13 +400,15 @@ def _exec_():
 				
 			reqdonex=False
 			while reqdonex==False:#:
-				r3=requests.post(url=url3,data=bodyStr3,headers=h3)
-				reqdonex=True
-				if DetectCloudFlare(r3.text):
+				try:
+					r3=requests.post(url=url3,data=bodyStr3,headers=h3)
+					reqdonex=True
+					if DetectCloudFlare(r3.text):
+						reqdonex=False
+						print('Sleeping for cloud flare')
+						time.sleep(5)
+				except Exception:
 					reqdonex=False
-					print('Sleeping for cloud flare')
-					time.sleep(5)
-
 
 				cok3=r3.headers['Set-Cookie']			
 				hostsession=extract_sess_from_Cookie(cok3)
@@ -401,18 +436,22 @@ def _exec_():
 
 	
 			h4={"User-Agent":userAgentH,"Accept":acceptH,"Accept-Language":AcceptLanguageH,'X-CSRF-Token':csrf_value,'Content-Type':conttypeH,'Referer':'https://hackerone.com/login',	    'Cookie':hostsession}
-			body4={'authenticity_token':csrf_value,'user[email]':ids[counter],'user[password]':passwords[counter]}
+			loginId=ids[counter]
+			loginPass=passwords[counter]
+			body4={'authenticity_token':csrf_value,'user[email]':loginId,'user[password]':loginPass}
 			bodyStr4=urllib.urlencode(body4)
 	
 			reqdonex=False
 			while reqdonex==False:#:
-				r4=requests.post(url=url4,data=bodyStr4,headers=h4,allow_redirects=False)
-				reqdonex=True
-				if DetectCloudFlare(r4.text):
+				try:
+					r4=requests.post(url=url4,data=bodyStr4,headers=h4,allow_redirects=False)
+					reqdonex=True
+					if DetectCloudFlare(r4.text):
+						reqdonex=False
+						print('Sleeping for cloud flare')
+						time.sleep(5)
+				except Exception:
 					reqdonex=False
-					print('Sleeping for cloud flare')
-					time.sleep(5)
-
 
 			cok4=r4.headers['Set-Cookie']
 			hostsession=extract_sess_from_Cookie(cok4)
@@ -452,8 +491,19 @@ def _exec_():
 				urlfinal='https://hackerone.com/reports/'+str(repid)+'/votes'
 				
 			reqdonex=False
-			while reqdonex==False:#:
-				r6=requests.post(url=urlfinal,headers=h6,allow_redirects=False)##,proxies=proxyDict)
+			while reqdonex==False: 
+				
+				if repcounter==0: #store valid session once
+					serh6=serializeHeaders(h6)
+					res={'email':loginId,'password':loginPass,'headers':serh6}
+					storeSess(res)
+				reqSent=False
+				while  reqSent==False:
+					try:
+						r6=requests.post(url=urlfinal,headers=h6,allow_redirects=False)##,proxies=proxyDict)
+						reqSent=True
+					except Exception:
+						reqSent=False
 				reqdonex=True
 				if DetectCloudFlare(r5.text):
 					reqdonex=False
