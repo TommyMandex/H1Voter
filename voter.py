@@ -141,8 +141,8 @@ def downloadlist():
 				reqdone=False
 				print('Sleeping for cloud flare')
 				time.sleep(5)
-			except Exception:
-				reqdone=False
+		except Exception :
+			reqdone=False
 	if 'yopmail' in req.text:
 		strm=open('list.txt','w')
 		strm.write(req.text)

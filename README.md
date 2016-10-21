@@ -1,8 +1,9 @@
 b# H1Voter
 Increase votes on hackerone reports
 
-
-
+~~~~~~~~
+python voter.py download report_id max
+~~~~~~~~
 
 #Usage
 
