@@ -376,7 +376,7 @@ def _exec_():
 			hostsession=extract_sess_from_Cookie(cok)
 			if hostsession == '':
 				log(url1)
-			print (stx.brown+stx.lin+'['+str(counter+1)+'] ['+str(done)+'] \n[A]-Requesting sign in ..... ')####################
+			print (stx.brown+stx.lin+'['+str(counter+1)+'] ['+str(done)+'] \n'+stx.magenta+'[A]-Requesting sign in ..... ')####################
 			#raw_input(reports)
 			s2=requests.session()
 			s2.headers.update({"User-Agent":userAgentH,"Accept":acceptH,"Accept-Language":AcceptLanguageH,'X-Requested-With':xreqwith,'Cookie':hostsession})
@@ -400,7 +400,7 @@ def _exec_():
 			print(stx.brown+'[B] +-Getting CSRF token ...')############
 	
 			
-			print stx.RED+'[c] --------[Login with "'+stx.magenta+ids[counter]+stx.RED+'" ]------------'
+			print stx.Blue+'[c] --------[Login with "'+stx.magenta+ids[counter]+stx.Blue+'" ]------------'
 			h3={"User-Agent":userAgentH,"Accept":acceptH,"Accept-Language":AcceptLanguageH,'X-Requested-With':xreqwith,csrf_token_header_name:csrf_value,'Content-Type':conttypeH,'Cookie':hostsession}
 			body3={'email':ids[counter],'password':passwords[counter],'remember_me':'false'}
 			bodyStr3=urllib.urlencode(body3)

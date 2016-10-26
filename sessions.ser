@@ -28,3 +28,153 @@ User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 
 
 -------------jerx------------
 
+headers ----=---- x-requested-with:XMLHttpRequest
+Referer:https://hackerone.com/login
+Cookie:__Host-session=TFBwa1c4MXhZdThHZmlzL1NUNFZzNnhxNWVRaFE3cCtGd1dSM2ErQnBEeWI0V2FLRnIzaGFsQkpVNDRudHZyZnBSclNqbkZIN0RrSmlsbjJJZ25BeFhCOTN4aXhHY3lpYjgzVXp5STQxeklqRHRwSEgwaXlraUhkQldyNXNOZ2VZN1pwckFwS0NDTzBGZjNJclJ1a3ltLzRVNElrTUQwQlZnNkhWSk93UWJpS2syaHNqZ0krZnB0ME5kMjVyZFIrMFAwTEIxUE1QdmJ3c24wUm9qY2Ntc242WkxyZEZLNDZnTWlGdUN2cFZhM01XQzFqcXJNNmM2YTdLNU1vWUJZcnp3cHZOWUJGUWJIa1FaWVdHUlNvY1JmZEpjV1p3ZGZZY2VySkliUDMwdEN5L0FrUXMrR1FKUnc1aWN1NDhBN1h2RWRaUmJpUUhxNGF4M0xNbFpTMURpUTNhMEVvRWUxelJHL0hBanFDWUdyT3BYUjhUZm53emlUV0krcHRZZE9ybUFYc0tvQ3VUdE02Q3g5cVEyRVU1R2Z3UTNVclRGcGpocjFYakxrWTMvY1hoVXEvODZBV1d1MEVtSEtkMmZ4c1BVbW1nWUJQcUc0VXQ3b1RnM1NEVW5UY09jZVZ2c25rR0dFcWRqZ1JlbVJLLzNqRWJDZUd1SW1vWEMyNVRSYnBlM1gxVnJvL1ZpTFpFODBXc3QrQlpGeWo1RGdHRElmbFJ2ai80QkdHaTJvPS0tR0NmZWJ2cDR2cVZQV1BTdTI3SE5FZz09--9cea932b585ebfd78f82e13beb575ff29fc9c72f;
+Accept-Language:en-US,en;q=0.5
+X-CSRF-Token:bEbINxtLR3SGLgjUyd3oxQMBhJHd8uXSSZgu+vLSo9+S6GplRIN0QwU42lmKulBeykBeDn88lMdYlOsY4jmZXA==
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+;;;;
+:password ----=---- 123!@#qweQWE;;;;
+:email ----=---- h.ackeronestilldropourrecordsxd@gmail.com;;;;
+:
+
+-------------jerx------------
+
+headers ----=---- x-requested-with:XMLHttpRequest
+Referer:https://hackerone.com/login
+Cookie:__Host-session=UjFzSUxNWU1ka3ZmcXJQbjNDcGlrbm1jYzRXdEtuNFR3ekNWS2QvdkkyM0pIeU9weUpPa2FXemdSbnFkeWF0ZHh0SlAyUFBzblpmU0JXVXdWb3FoT3VrcHZhUlRHWnFYVllYT2o4K0xSd0k1Sk90dGpoWjllSHEwSURPT05UL0xqUFVJdWQxeU5LL1pBSFhmVEk2K3JGZlAxU3RDZk44bzMvSExucDBENEVrVXR2dmNPN0FzSjNzZVRFV3VzMG5KdnduVEhIMllteVRwdHBmUkFMWGhWK3BVWVpsWWxob1lOQVVqZ09ONUpqdy83R2hZcGtCN1RiNWRuS21lVHp2WjZqdEdSeGJSWXo2THEzNm9tRWVXQVRsN1FnTDlqU29rYzVaaWhqWXhsbzhLQTNKK3pvUUVpa1N5RkN2R1ovSER2MjRSRUN2a0UweXBacVE0eG56NFRWbzFLeC9UQ2J6SmlDWFYwMUZLbjBPSGdML2NYcHdiK3NUYkcyWmxleFlKZHFJVi8vSk9kZ1ViYml0QTMzd0VIWk1aSXkrSGxyLzcwTGM3MVNWdFNsNG5FY0lwMER0dkJsbmtwbE14SlVFemFoSHdmNXhwZ1QzWVlZRi96eEVGdnNSTHUwOUh4M2RpSkR0RSt0OExiU1NpMUh1ZFF2OWF1SHJSd0hjeFRndldENFNtZHFjakkzV2hzME92cllXSkpZdnBEUDEwZ01XdlYzYjFHZVd5SE1BPS0tU053MExES21ialB0b0lxU0lRSHdtdz09--a409ed0114350e7f21e7626cb8718f7f495532ff;
+Accept-Language:en-US,en;q=0.5
+X-CSRF-Token:lrUam95OaaEfAkcRtQYVgYIfuheYi9GiDS5NytuuTygJyCv5JcEgbe/7N0Xa+ves4qUvQJqnqeTkSGjKB2oE4Q==
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+;;;;
+:password ----=---- 123!@#qweQWE;;;;
+:email ----=---- ha.ckeronestilldropourrecordsxd@gmail.com;;;;
+:
+
+-------------jerx------------
+
+headers ----=---- x-requested-with:XMLHttpRequest
+Referer:https://hackerone.com/login
+Cookie:__Host-session=RkJ3YlFqQ0FFWHAwNXRoV0NpaXpETTRQWENXNHBYcHpJbDd0Q2Y4OWpaUDhJVlFreVdkZnFkZ0lISUxoblhKNXZoZmlIcU5ad1M5KytNdHlGQnBSSVNxajZsWjRGVVNjRHBFb0c2SHpYVW9Sdnl5b3VtalRWWlJvaXJINml2QjdFeWg1WnpRV3UxZFp2WVgyODhWUDVIUmd5cWlNOHg4N2hoWFlvNzBpS3EzZ3czVThPeTFxTnBzcHgwd1JGTUFxSEYxNHczNmNZU3FzY3k1SkN1dEJVN29ONGdFa1FkaENocHpRLzlXUDNyMVYwSllFSStvVVYrTXVxQ1NvN3hnOHNSQkJSMzlsYm1VTHk1VGhEL2hpTGpwZTFHM1lmY2xuUWhUUlRxNWlPMUk5RjU1WnpvRXNWSFNDUzdxMjJLMndxKzE2TUVHUHlETTQ5L2VVSWRGS0JNSVVxOERhZENkQnlSTzUrcEFLVndUVXpKcnFwZ21tcERUTU1hS0lYR1hLRHc2bDFwMHEwL1IydElIRzRucDl5Um5pZ0k0SDNNbFN0K2JZQjhMMWtIa2R3S0lpZk5LN3ZtVTZlU0k2OWVwZlVKbjRxY0RPcTdtc0V2VWZURE1PUnh2VHVXTWFPN1hyUUh6dlNRVGQ5VHBkMG15NXZYSnRRYXlnZE13WVl4M0FHWll2dThOTE1EclhGVHJhZk96ZEdQYkZZdFltNm13ZWdwaW1jMGxUVkNJPS0tYUJzL3BVdm1sTmFaSk9uUjgvTVpSdz09--c7304297a5b5efb09a46a896969edbcf7e5370aa;
+Accept-Language:en-US,en;q=0.5
+X-CSRF-Token:szxU+wcZu7kMSJbrMnPa7E0tJJztCan95s8ReOqyYQYpHT1PcTklPFuv0qBGEy6GqCGm03FB6jKj7V3mJYcM9w==
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+;;;;
+:password ----=---- 123!@#qweQWE;;;;
+:email ----=---- hac.keronestilldropourrecordsxd@gmail.com;;;;
+:
+
+-------------jerx------------
+
+headers ----=---- x-requested-with:XMLHttpRequest
+Referer:https://hackerone.com/login
+Cookie:__Host-session=eU83R3lXSHJOemJDZHJqditSR2NNNGZKeHpOeW1tWHdhaHV2M2NQT1BpWUd0bkNJWDNLN3NzTHdrN0h2MGNkaEdWdVN5cGJkZkIvZmVGSFVjaUQ2K3NPQ2NCVjJlTHlMbG1XMEUzTS9reS81UkpoOHlDZkVmUnVkMmNaRGsycjJmdEQyd1NvNENuMzh4aTlKVU51YjJDVFpRNk11SGZNbk1xUzFmUTcyeUNiTG05ZU9ScVE4SVN3VlNaM2Y4dXBuTDNtcmNieE0xekhiaVZRMjd5ajUyQlFMcUpzYTlPQTl2djM2SDN6Q1daTDNrRmlUUjdDVnlYSTkvNjJnV2N4R3pJMDI4eDZpUlpWR1cyZ3NFRVBlWnplOExsWTNPNXc3OFgxdDVYNGlEVXRTY1lkUHlweXJXTWp6ZzZzcTUwSmFOZXQxMXRwNjk1ajZNY0VjeGJSZEtGSElPYi8veUVvM08veWRIS2hhQ0NvYnluTlplUHBobTB1dlhOVjJCQ3dPdHVpMFN1T3FaNjVWR0FkTUJYeWwxcGJiVm1kQnpHbVJZQkcyOTJXcGcyekdoK0tEWVAvbGJsMzMrZzN1dzBHMVN3eWRVRGMvYmpGMjlMWUN6ZzJwWGRWWHdJcnFNaEhWRkxYWVBtVmtsYXRiOXEzcnFjMXVTaVlScEdGdVZZZ282UHVMRHdmK0FLaTBDeFRLVFJxT3NoOERLS3JtN1JqWllST2RwU3J3cWVRPS0tOWlNcmI2UWgrQkQ2TkxWUlo0NzM4QT09--d7a75a6b0edbe8d9acdcf0dfca70669e4846c4a9;
+Accept-Language:en-US,en;q=0.5
+X-CSRF-Token:fj5gGKuxHmTtCZBME++X20/xtH4U1C29M4drxOs75jOggSdQHka6qy9OReWe4LfIQClbeAM/5n1hrM9G6s1MKw==
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+;;;;
+:password ----=---- 123!@#qweQWE;;;;
+:email ----=---- hack.eronestilldropourrecordsxd@gmail.com;;;;
+:
+
+-------------jerx------------
+
+headers ----=---- x-requested-with:XMLHttpRequest
+Referer:https://hackerone.com/login
+Cookie:__Host-session=Y1QrdkUzUVhGMkhPTlc0K0dNemNhV2tMTEkrVDM3dEwwWTQ2MURDYzd1VmpEV3RKV05LRXRCb2pqOVVnVFdSMjhEWG9tT28xUzFCTWM2SjVGemJrS3Z2aENHeWFjTE5sZXZHd2xFaDhNcnQwaTBBZWVwTkhNZ01kZDRqUnRKRmMvaGFpOXdlSER0WlhaSUxneHNZYXkxRmZOdDM2S2NmZml3c1oxRys5Y2dScU0wcktDQmpKU2t4eUlJUFpUQkFMQ1F4aGlISVVrR3FKcUxxdmh6V0Zad2hSMDN1SzlhWG56cUdyQzVhWC8zMkJ4Szl6cUN2TVBaUVlhOHh3c0svUEYvL01URTBBTzdrbGRiV0E3RVdWdlNzbWNYZm1aaUtMSXlES213NzFudnN3eHdLU3prcGpWODJjU1gvaFFadFlnNDhHdWFKdUhHb0p6bU9EYnVnaEFiamExRUJLcnAycCtoV0poTFlMYjV4YnN1SlJja1pEMlhjemF6QXBqUTdpYWFRUjcwZk51YldCZDJOMVhySk15eFVMRHhwelZ2TElDNVZ2ZDczdXBtUStHZUJOM2JRS1hzNEJQNzExUExvSEs2bmZFMWpxODNxV1FHQU8xazRPSStZM29IL2NyN0ZVeDBxL3ZPUjk1Y2xVeUUvQlFTRWxNUlIyVExMVHNtQThjU1dvUzdDb1RrV3BaSWtiZXZLbzlFMmtQVStvREJQWmdJYkZUMXd1SDhjPS0tTXJQWFBqd2hEcVF1cDFxV0t0dGJJQT09--7d9d21cc159a1d805dc705d1439f7ae8ada3404e;
+Accept-Language:en-US,en;q=0.5
+X-CSRF-Token:TPnD3lo3KZV7UxwUFRvxlFexCTYm9698ZbwyPYao7gBwXf9UaLjbgvt6w/D+jS2NejwVVz4npWDXo1uRe7Y9CA==
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+;;;;
+:password ----=---- 123!@#qweQWE;;;;
+:email ----=---- h.ackeronestilldropourrecordsxd@gmail.com;;;;
+:
+
+-------------jerx------------
+
+headers ----=---- x-requested-with:XMLHttpRequest
+Referer:https://hackerone.com/login
+Cookie:__Host-session=dHE5YVJhMDJzUkFhbG42ckpQamFSdm5PTi9uVVNVeHhjZEtqZW9oVjFiTk11T0UyTXpxRzZRT1g5U2M1Y1VFOHc5UElMZUltRVQrenhteW92V0tJdHY4dDhxMCtqZXhXbUdSbjFrWSs2S3YxRVVseExRd1drbnRndzYrdGNiT0FCaTAreTJQU2Z0cjJ2Q0tuaFZUVWcxNVlMckVhMjhzL1ZXSjgxVFdTbGkyR0Y5ZGl6Sk5rNEVyUlRqUlVtS3RiY3craGlsZDV2eXRsNmdTSTdhcFVEODlpR0tSQ09hUy9zNFVyZkZGc0hoSjdEanpKZ0lWN3ZWMU9aMU9iczVuQVA3K1kyd3YxNDJ2L29MT29rYVFtQUtRRks5a01SMFBwUFNTZENldEswRHI0UDhpYVhpTk9WZUxjcnVHdytwaWdnWXRHT0FtdHMzNmYybWgva0NIWTFkVjQ3dU1IUmFjd3VXWlp0SnBZamE3VENCZTQ2T3dyU0RlYmVQRzJPNlF2U21RZnViZE5MVGJ6WjRFditnc2UwTStOcUU2cTFSa29TcGRid0F3MnpFYVVBWHhIdVkyUzlzTWVyWHdtQ3VwOG1VbGI4SXJBMGdvVHJRV04vbUtXQ1JzUldOVVBwVEtnbnpGSm4rQWhseGo2c2tZdjdOU2sxdTRTTU82ckRkR0I5c1hySjRRRThQcWFrclVTajFBL1I4T0ZRS3M2dlc3dVhNd2k2bURYazlRPS0tZk1WdzhVc0ZFQVd4b3RkVVoxaVpEZz09--3aa0c461b4adf5242559d8a52219706898849256;
+Accept-Language:en-US,en;q=0.5
+X-CSRF-Token:NtTIdKCvyvIRaqh51h2WjDBPJMg+hKfPQvLHPMRCkDxB4KEMxLHdJ3pYXMDs4TD6laulo/a4LctFpG3M9lMaPQ==
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+;;;;
+:password ----=---- 123!@#qweQWE;;;;
+:email ----=---- h.ackeronestilldropourrecordsxd@gmail.com;;;;
+:
+
+-------------jerx------------
+
+headers ----=---- x-requested-with:XMLHttpRequest
+Referer:https://hackerone.com/login
+Cookie:__Host-session=V2l6eldHUVhFTWpmZWd1ZDVMRjcwcVpVcWZ6eEJwZlA0V1hJRHh5WU5PWHdEYW8yYzNaSFVpc0trOXZnR1VJblJyOTErQVJLRDdsR01XVUJVK1ZySzdSNGlFeHdtd0VvWVZEZEpvNFJKbjF5Q1NYL0V4S2MvM09SdUthbGdhSGp5dUhseWVqcXYrQ0V0ckNyaEdIay80MERRV2t6K25KRzAvN0N5c09xTDJrcGJRdmVnOEpMQTZHaERjbCtSd25KWnB6ek5MbHlCYy9hQUdydzJFY0FnQUI5M2pnU1ZJZXptTDNoS3FoTlJ0ci9iejVyTG45TUNmZ2NvVGtxQUt1LzZCYTNKd2crQ2pyUXZIdjRYTC9HUzdxd0hxSG1NQjVvbUU2bTFzMS9jcFNiM3hvbHZ6Tk5kMVdKZ2Rlakc4UTZKTEFWWm85UHJ0b0hzOStxUjI2QjN6SXZqTmhORTlzeEdZb1VMZnJjbDVwS0dVVWJ2M2U1K0VacTNJM2ZndUlmeVUwZ20wZTRqQ3J1Yyt4TVlnZER1K0FCVXZKUGpMT2MrVE5jT0hBRWxobjRKbW9PcTdaeStWOEFsY09mV01qaXZ6U2hubVpxK3FoZk55V0RVNTh1ZmtQWnM0M0J4NlRlRnVRZ3Y3b3o0dXA1U3d5SzdDQjJuYlpWTm5Sd01YZUVka2pEbWtSOG9ES1gvQ3QvYXhZc2lSQ2ZLVS9EakZyZDdSUTFCTmRyT2VrPS0tdE9TeFkvUWlCRnhEekJvcXczWFduQT09--d6fad9a2d842c743ccb5bdf74daf4e48c5d1f953;
+Accept-Language:en-US,en;q=0.5
+X-CSRF-Token:WNU9FcQpyHjCFAVOf21Drz52TZOJfsq+qBO3vwbdXntSmetw8OoBrP5Yo6GUjS8Hde8WfpmWHo6Nfa4uzOMiog==
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+;;;;
+:password ----=---- 123!@#qweQWE;;;;
+:email ----=---- ha.ckeronestilldropourrecordsxd@gmail.com;;;;
+:
+
+-------------jerx------------
+
+headers ----=---- x-requested-with:XMLHttpRequest
+Referer:https://hackerone.com/login
+Cookie:__Host-session=aENXRmR0WEZuNlFmeXZocHY1RkRNUmtjVzBxWUtXRVFySGxJV2kvNFFvQ25hNHViUHkyTGRPd0U1MzBnL002TnNML0V0czFwSWRWUGE1VjQyVTZsS2FDclZuNkpyNmhnVDEycFUzTXRlOTJpLzdJTCtTUzF4YkhNQmdxSkVjaGFPUW03dHpqTDVoUjVidGJoazdOTWRmTi9HWThLK2I1OGw2TUhyY1VMOFp3OFBBbnM4YWYxU1loWWJZLzJmVHEzS29LaVBDaExhaUNtaFNQN1d3eVp1NzhVV0o2dVZXTGJEQldyWWc1cjk1QjMrQmRzakZPYjk0OWxXQWJFa0h1RlNIWUFyNklnMlR6ZS9BUEM1eUhKZ1BtcUo3ajY4TGRkTmY0TzNDbUVaQWJqTHQramo5cVowRStPMHp4bERPWHZPT1Fwa3QxaXFGR3BOY3RpNkZ0M09HOUZ1Y2RXN1M5dE10eW0zRVpaT2dyWGtBa09NRUlKQ25oTnA5cE83Um9idVhqbTRLZUZXdXd4YVRnTFVlYnIzUndYVjhEbEpqL2UyNThoWUtFR1BEb21jUDF4R1RCZVNOenhsak5jelF2NHFpQ3lCSm9FQ285cm5tUHdJYnBBZzdqRWlqM0UwVGhxbk10bFV1NGVJU1lvOUNlZmR5MnpGejQzaUNMb255WDlGSVB1VldnOGd1N25mKzFkR0N1Qm1nUTgyTGltTkxXWU1RdDRmMmhPVXo4PS0tR09NMzhRRHhGSXducU5FMmlsckVnZz09--c613be7140b41a4f04c3c067cd6d9c17e8b51a4f;
+Accept-Language:en-US,en;q=0.5
+X-CSRF-Token:mB0lIMrh1jvo1JI60jqc0f6lVvWcXSSxShdSZyuT+58OE+zBJm40V/0qqWYHVHiihNaE6kFgfLLCEWTRBuvFPg==
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+;;;;
+:password ----=---- 123!@#qweQWE;;;;
+:email ----=---- h.ackeronestilldropourrecordsxd@gmail.com;;;;
+:
+
+-------------jerx------------
+
+headers ----=---- x-requested-with:XMLHttpRequest
+Referer:https://hackerone.com/login
+Cookie:__Host-session=QmI4UWxYRmZuU0ZhTXJCQlNsSzJEaGxRMWFYWWNOQ01uVjFOd1M1NHhIZm1GWlEzOEJwM1JYN3RQa2paZjQ0dE9FU1B3RjZRODgzaGtWNmhPb2w4ek1Fd2ptZXpDV2JQOE5vRzF2Nzk0dlQ5ZFhCaUNUUGRFR2xxLzlDNTNHV2xGNWhRRzllbWNvMUZXUmJQaER6UWJQMkp3SjcyTm1jVng1TVVhRkhKYlRZd2MvTXpYdi9XdndwNTBsNDl3TWwzN29lSnlhSElUQThkNVpOZnpqc1BIS1lyUWM2VVI4Z1NlWUJoZkxTZ3NlcGxja0tMdC9VeEtiejhPQnB5OGh6NFFGM1B1RTBtQ0dDalJiVEduaVIwTkpLSllQQlBoUStaNWtJTDFNWXpzOE5ZY0ZHMnlpSkVCZ0duMHlPbXo2a0hHYUJvOE0zTXoxNTRtK3lGRXVDUjU4MHkrZFR3Tm5UVW5aQ3lraXlSMGtyTkFxaUExTHp3eHlFbk9RcDFiUVpjTFVNcUdySzZMMm1WalZEUDlRdnNzaFV0OVZpODlpSlBWdlJteTVzUHhLTVlZdVhMYkc2NCtvd2hGdDNmS0h1VlRraXVVaGZ2STdJNnkyMXhXMU9qK05kUHB6cmZjN2k4bCs0ZGlqVVk2WlBETVpJZFROQmNYS3p4aG43NWNQZWhtU0Y5a01OWWFPOUlxRWZEeDMrTVF4MjhCUGd0L28vdm93bnlqVTA2cDljPS0tV3RoU0xIdnBBcGV2b2ozNWMyc2lsZz09--34ab40dfe4284e261519f18f5b2a43396ada25b7;
+Accept-Language:en-US,en;q=0.5
+X-CSRF-Token:Fse11nd9jjcuU+a15zLpS4OfXMGMujxI+dtDoe0D5XbCoAqwqUK1Fqzl7XjDYHUAYSc4ZWAHEKOZKLSZ9MGt+g==
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+;;;;
+:password ----=---- 123!@#qweQWE;;;;
+:email ----=---- ha.ckeronestilldropourrecordsxd@gmail.com;;;;
+:
+
+-------------jerx------------
+
+headers ----=---- x-requested-with:XMLHttpRequest
+Referer:https://hackerone.com/login
+Cookie:__Host-session=a1lqei9jaUZHaW1zbzNNdGlRTnVVTkVoQVd6R0Q4UWF1UzNmYmtMVXp3V2F3clhxRTg0eUw5Sy9qRXhDeUVqR3dkVFlUS1FKZGRvV1gzdmlyMVoxR2FxaFViVGFmNEU2bzBJcDZtVm5EOUhSMlg3QlhYOXVPWTNEazBNaG55bXM0cVRIMW81aURLS1dxV3VtS0V6b0NqcENTOU9vWnpuTnBKK2J5UzFJd2s2ZzIzMXdWbFVkaTQyWHdiTDRkRG9XV1YyVnlmbWM5V2dOaEJheGtENHBYcUh0YXpzRGRaNEVYL210eUxrVzJHQkpRRHV5c2plenJvVXhlVFFVNG1DQ1ZMOU9na1FndTRxTC8yVFhPMkFxdlhKWW1DSkw0dXIxWnBKK3YydkJMZm9WUlp4aWdVN0c0S2xIUGJjVTI2M0JHYU1FTlBSY2lkQU5HU2JVT05JUlFjRHhnRnNmRE1YM1FnQ0d5aGpHMmlFSTk3NHZONHNCQSs0bkpEaURtdHU5QmdDWVhuYVVoeHlnWW9BVjc4SEFuK1pUWDNyVDVrT2phcWJIVnZPQlAzYUJnY29GMUR0eXNjOTBQTUppaXd4M0tZS2pUYktyOFIwaFFvWXA3NmRsMHVuK0Q3VWRFSklKZWpLblU5cU1KaFB3WWdVY3BXQXJNK2JaUWd6SEVUNFp1SjdJTTF4czB2VWdaaVQ0OU9SMDZYdm14eVpYRDEwOHZiMi94dGd1Z0UwPS0tOWI2TlJnVDYrc283Rk10c1F0a0l3QT09--29b33fbd8e6743c9a7f9ef1c88ab612f9319894d;
+Accept-Language:en-US,en;q=0.5
+X-CSRF-Token:xbcaSkSQOyhZHHdZaBWMHLJGUEHWV4joaYSxeE0z3F4wqDoGwER+vkNnuGACRHurP0krHPvOmrP8dftgNvVdyA==
+Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:47.0) Gecko/20100101 Firefox/47.0
+;;;;
+:password ----=---- 123!@#qweQWE;;;;
+:email ----=---- hac.keronestilldropourrecordsxd@gmail.com;;;;
+:
+
+-------------jerx------------
+
