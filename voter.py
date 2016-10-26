@@ -319,7 +319,8 @@ def _exec_():
 				print stx.yel+'['+uid+'] is '+stx.RED+'invalid or not available '+stx.yel+'yet\n'+stx.yel
 	else:
 		reports=stx.repstr.split(',')
-		for i in len(reports):
+
+		for i in range(0,len(reports)):
 			done.append(0)
 	#raw_input(reports)
 	if len(reports) < 1:
@@ -375,7 +376,7 @@ def _exec_():
 			hostsession=extract_sess_from_Cookie(cok)
 			if hostsession == '':
 				log(url1)
-			print (stx.brown+stx.lin+'['+str(counter)+'] ['+str(done)+'] \n[A]-Requesting sign in ..... ')####################
+			print (stx.brown+stx.lin+'['+str(counter+1)+'] ['+str(done+1)+'] \n[A]-Requesting sign in ..... ')####################
 			#raw_input(reports)
 			s2=requests.session()
 			s2.headers.update({"User-Agent":userAgentH,"Accept":acceptH,"Accept-Language":AcceptLanguageH,'X-Requested-With':xreqwith,'Cookie':hostsession})
