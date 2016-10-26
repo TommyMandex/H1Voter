@@ -1,11 +1,9 @@
 #!/bin/python
-
+#this script helps you to vote up on your reports
 import requests,os,urllib,sys,datetime,time
 requests.packages.urllib3.disable_warnings()
 
-forceVote=True
-#Reg 0 : 1250
-#unconfirmed 770 : 790
+forceVote=True 
 
 
 

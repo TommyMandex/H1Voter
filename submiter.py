@@ -1,3 +1,7 @@
+#This script was made to spam hackerone public programs
+# but it is stopped , we are not bad.
+#
+#
 #@/bin/python
 
 #!/bin/python

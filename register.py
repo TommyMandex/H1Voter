@@ -1,3 +1,7 @@
+#This script helps you to register multi accounts on hackerone
+#
+#
+#
 import requests
 import datetime,time,os
 import time
@@ -183,20 +187,23 @@ for u in range(f,end):
 				#s=compemail.split('@')[0].strip()
 				randint=randomNumber(2)
 				randint=int(randint)+5
+				randint2=int(randomNumber(2))
+
 				while randint >= len(randomNames) or randint<0:
 					rx=int(randomNumber(1))
 					if randint>0:
 						randint=randint- rx
 					else:
 						randint=randint+ rx
-
-				s=randomNames[randint]+'_'+randomNumber(5)
+				while randint2>=randint:
+					randint2=randint2-1
+				s=randomNames[randint]+'_'+randomNumber(5)+randomNames[randint2]
 		else:
 			s=name+str(u)+sufx
 			compemail=s+'@'+ea
 
 		encodedEmail=((s+'%40'+ea) if FromFile==False else (compemail.strip().replace('@','%40')))
-		print(stx.yel+str(FroCount+1)+' Registering with ['+compemail+']'+stx.Green)
+		print(stx.yel+str(FroCount+1)+' ------------------------------\nRegistering with ['+compemail+']'+stx.Green)
 		s=s.replace('.','')
 		if len(s) > 25:
 			s=s[0:25]
