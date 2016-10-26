@@ -237,7 +237,7 @@ for u in range(f,end):
 			print stx.Green+'Register  succeeded "'+data_name+'"" >  ['+compemail+"]\n"
 			#x.append(s)
 			reg =True
-			ids=s+'@'+ea+':'+pas+'\n'
+			ids=ids+s+'@'+ea+':'+pas+'\n'
 		elif 'later' in r.text:
 			print stx.RED+'Detected Retring in 5 seconds'
 			time.sleep(5)
