@@ -9,12 +9,10 @@ forceVote=True
 
 
 
-def DetectCloudFlare(r):
-	if 'px;">DDoS protection by CloudFlare</a>' in r:
-		return True
-	return False
+
 os.system('rm -rf errors')
 class stx:    
+	repstr=''
 	RED='\033[1;31m'
 	brown='\033[0;33m'
 	Blue='\033[0;34m'
@@ -37,6 +35,10 @@ def serializeHeaders(h):
 	for k in h:
 		z=z+k+':'+h[k]+'\n'
 	return z
+def DetectCloudFlare(r):
+	if 'px;">DDoS protection by CloudFlare</a>' in r:
+		return True
+	return False
 def serializeSession(dic):
 	data=''
 	for k in dic:
@@ -66,7 +68,8 @@ def log (msg):
 	strm=open(fil,'w')
 	strm.write(msg)
 	strm.close()
-	raw_input('\nError ['+fil1+']\n Press Enter to continue\n')
+	#raw_input('\nError ['+fil1+']\n Press Enter to continue\n')
+	print('\nError ['+fil1+']\n')
 
 def extract_sess_from_Cookie(cok):
 	try:
@@ -180,6 +183,7 @@ def load():
 		    	trydownload(False)
 		
 		reports_string=sys.argv[2]
+		stx.repstr=reports_string
 		del reports[:]
 		if ',' in reports_string:
 			treps=reports_string.split(',')
@@ -274,44 +278,52 @@ def _exec_():
 	reportsTitles=[]
 	invalidIds=[]
 	done=[]
-	print stx.Green+'\nChecking ids ....'
-	for uid in reports:
-		reporturl='https://hackerone.com/reports/'+str(uid)
-		
-		reqdone=False
-		while reqdone==False:#
-			try:
-				rep_req=requests.get(reporturl,headers=h,allow_redirects=False)#,proxies=proxyDict)
-				reqdone=True
-				if DetectCloudFlare(rep_req.text):
-					reqdone=False
-					print('Sleeping for cloud flare')
-					time.sleep(5)
-			except Exception:
-				reqdone=False
-		
-		if rep_req.status_code ==200 or forceVote:
-			if uid not in validreports or forceVote:
-				validreports.append(uid)
-				done.append(0)
-				tit=''
-				if len(rep_req.text ) > 350 :
-					f = rep_req.text.split('<meta property="og:title" content=')
-					try:	
-						 if 'disclosed on HackerOne' in f[1]:
-						 	
-						 	f5=f[1].split(':')[1].split('"/>')[0]
-						 	reportsTitles.append(f5[:-25])
-						 	vn=stx.Blue
-						 	if len(reportsTitles) % 2==0:
-					 			vn=stx.Green
 
-						 	print (vn+'['+uid+'] ['+reportsTitles[len(reportsTitles)-1]+']')
-					except Exception:
-						some=2
-		else :
-			print stx.yel+'['+uid+'] is '+stx.RED+'invalid or not available '+stx.yel+'yet\n'+stx.yel
-	reports=validreports
+	if forceVote==False:
+		print stx.Green+'\nChecking reports ....'
+		#raw_input(reports)
+		for uid in reports:
+			reporturl='https://hackerone.com/reports/'+str(uid)
+		
+			reqdone=False
+			while reqdone==False:#
+				try:
+					rep_req=requests.get(reporturl,headers=h,allow_redirects=False)#,proxies=proxyDict)
+					reqdone=True
+					if DetectCloudFlare(rep_req.text):
+						reqdone=False
+						print('Sleeping for cloud flare')
+						time.sleep(5)
+				except Exception:
+					reqdone=False
+		if True: ##lazy to remove the next tabs	
+			validreports=reports
+			if rep_req.status_code ==200 or forceVote:
+				if uid not in validreports or forceVote:
+					validreports.append(uid)
+					done.append(0)
+					tit=''
+					if len(rep_req.text ) > 350 :
+						f = rep_req.text.split('<meta property="og:title" content=')
+						try:	
+							 if 'disclosed on HackerOne' in f[1]:
+								 	
+							 	f5=f[1].split(':')[1].split('"/>')[0]
+							 	reportsTitles.append(f5[:-25])
+							 	vn=stx.Blue
+							 	if len(reportsTitles) % 2==0:
+						 			vn=stx.Green
+
+						 		print (vn+'['+uid+'] ['+reportsTitles[len(reportsTitles)-1]+']')
+						except Exception:
+							some=2
+			else :
+				print stx.yel+'['+uid+'] is '+stx.RED+'invalid or not available '+stx.yel+'yet\n'+stx.yel
+	else:
+		reports=stx.repstr.split(',')
+		for i in len(reports):
+			done.append(0)
+	#raw_input(reports)
 	if len(reports) < 1:
 		print(stx.RED+'No valid/public reports to vote on\n Leaving..'+stx.White)
 		exit()
@@ -366,7 +378,7 @@ def _exec_():
 			if hostsession == '':
 				log(url1)
 			print (stx.brown+stx.lin+'['+str(counter)+'] ['+str(done)+'] \n[A]-Requesting sign in ..... ')####################
-
+			#raw_input(reports)
 			s2=requests.session()
 			s2.headers.update({"User-Agent":userAgentH,"Accept":acceptH,"Accept-Language":AcceptLanguageH,'X-Requested-With':xreqwith,'Cookie':hostsession})
 			
@@ -496,49 +508,53 @@ def _exec_():
 				repcounter=repcounter+1
 				urlfinal='https://hackerone.com/reports/'+str(repid)+'/votes'
 				
-			reqdonex=False
-			while reqdonex==False: 
+				reqdonex=False
+				while reqdonex==False: 
 				
-				if repcounter==0: #store valid session once
-					serh6=serializeHeaders(h6)
-					res={'email':loginId,'password':loginPass,'headers':serh6}
-					storeSess(res)
-				reqSent=False
-				while  reqSent==False:
-					try:
-						r6=requests.post(url=urlfinal,headers=h6,allow_redirects=False)##,proxies=proxyDict)
-						reqSent=True
-					except Exception:
-						reqSent=False
-				reqdonex=True
-				if DetectCloudFlare(r5.text):
-					reqdonex=False
-					print('Sleeping for cloud flare')
-					time.sleep(5)
+					if repcounter==0: #store valid session once
+						serh6=serializeHeaders(h6)
+						res={'email':loginId,'password':loginPass,'headers':serh6}
+						storeSess(res)
+				
+					reqSent=False
+					while  reqSent==False:
+						try:
+							r6=requests.post(url=urlfinal,headers=h6,allow_redirects=False)##,proxies=proxyDict)
+							reqSent=True
+						except Exception:
+							reqSent=False
+					reqdonex=True
+					if DetectCloudFlare(r5.text):
+						reqdonex=False
+						print('Sleeping for cloud flare')
+						time.sleep(5)
 
-				temp=r6.text
-				justf=''
-				indxer='['+str(repcounter+1)+']'
-				if len(reports) <2:
-					indxer=''
-				if repcounter<1:				
-					justf='[F]'
-				if '{"vote_id":' in temp:
-					print(stx.Blue+justf+'     ['+indxer+']  +Voting result : '+stx.Green+'[Voting on '+str(repid)+' Succeeded]')
-					onevotesend=True
-					done[repcounter] =done[repcounter]+1
-				elif '{"report":["user already voted"]}' in temp:
+					temp=r6.text
+					justf=''
+					indxer='['+str(repcounter+1)+']'
+					if len(reports) <2:
+						indxer=''
+					if repcounter<1:				
+						justf='[F]'
+					if '{"vote_id":' in temp:
+						print(stx.Blue+justf+'     ['+indxer+']  +Voting result : '+stx.Green+'[Voting on '+str(repid)+' Succeeded]')
+						onevotesend=True
+						try:
+							done[repcounter] =done[repcounter]+1
+						except Exception:
+							tyu=9
+					elif '{"report":["user already voted"]}' in temp:
 						print(stx.Blue+justf+'     '+indxer+'  +Voting result : '+stx.magenta+'[Already voted before on '+str(repid)+']')
-				elif '{"status":"404","error":"Not Found"}' in temp:
-					print(stx.Blue+justf+'     '+indxer+' +Voting result : Unavailable report ['+str(repid)+']')
+					elif '{"status":"404","error":"Not Found"}' in temp:
+						print(stx.Blue+justf+'     '+indxer+' +Voting result : Unavailable report ['+str(repid)+']')
 
-				else:
-					print(stx.White+justf+" "+indxer+" +Voting on "+str(repid)+stx.RED+"[ Failed ] "+stx.Green)
-					invalidIds.append(ids[counter])
-					alldone=0
-					breakreports=True
-					counter=counter+1
-					break
+					else:
+						print(stx.White+justf+" "+indxer+" +Voting on "+str(repid)+stx.RED+"[ Failed ] "+stx.Green)
+						invalidIds.append(ids[counter])
+						alldone=0
+						breakreports=True
+						counter=counter+1
+						break
 					#log(returnresponseMSG(r6))
 			#if breakreports is False:
 				

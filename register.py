@@ -30,7 +30,7 @@ class stx:
 	crims=' \033[1;38m'
 	magenta='\033[1;35m'									
 	lin='\n---------------------------------------------------------------------------------\n'
-randomNames=['hany_ramzy','adel_emam','ghada_abdel_razek','youssra','Abla_kamel','Mona_zaki','abu_trika','hossam_hassan','mofeed_fawzy','samira_sa3eed','Hend_rostom','sara_jay','anjelica','sophie_dee','maysa','mamdooh','bill_gates','Abd_elfattah','taha_hussien','john','levis','brad','max','haven','tapol','lexi','sam','michil','henry','chris','frank','jobert','steven','dep','smith','franklein','zak','josef','merlin','donald','barak','adel','sarah','taison','fawzya','nermeen','hend','zakaria','yasser','emad']
+randomNames=['hany_ramzy','adel_emam','ghada_abdel_razek','youssra','Abla_kamel','Mona_zaki','abu_trika','hossam_hassan','mofeed_fawzy','samira_sa3eed','Hend_rostom','sara_jay','anjelica','sophie_dee','maysa','mamdooh','bill_gates','Abd_elfattah','taha_hussien','john','levis','brad','max','haven','tapol','lexi','sam','michil','henry','chris','frank','jobert','steven','dep','smith','franklein','zak','josef','merlin','donald','barak','adel','sarah','taison','fawzya','nermeen','hend','zakaria','yasser','zeroday']
 #Testing only
 proxyDict = { "http"  : "http://127.0.0.1:8080", "https" : "https://127.0.0.1:8080",   "ftp"   : "ftp://127.0.0.1:8080"}
 cokstr="__cfduid=d1cdfc0b504bd870dc94c5509a2f41bd71472917466; _ga=GA1.2.1635264352.1472917475; __Host-session=anhEcDkzOVVwYWxDL2pVSTJ3NTZWeHFVUzhTTzVHbDNzK1lQUWl3eG53Q0xyNHdLY3Y5aHJsQnl4VUNtSjI4OWx6bFozRDZDcFBRQVlXdjBsMXpaUEFNR3ZpTFV6c1NVU2s0TnBvMFhVZTAxWEVyUXVQT2FDSExUNjFZQW16UG1IWWlxaE9Zd0h1SFNmKytFWW52eG81N0xqWTh1QW16bS9leThwME1sQXllWE00bHJCN2NqNTlMN3pWckN2eXFULS1qcFJoTW1SSVF6VkVVQXllT1QwUy93PT0%3D--94bd223fffd82f1c61b2d03cc2f0be5ac1f3b93a; _gat=1"
@@ -39,6 +39,18 @@ url = 'https://hackerone.com/users'
 
 x=[]
 os.system('clear')
+
+def stripNum(s):
+	if len(s)<2:
+		return s
+	zero=ord('0')
+	nine=ord('9')
+	res=''
+	for c in s:
+		co=ord(c)
+		if co >nine or co<zero:
+			res=res+c
+	return res
 
 print'\n -------------------------------------------------------------------------\n'
 print('\n ------------------- Hackerone Bots Maker--------------------------------')
@@ -171,8 +183,13 @@ for u in range(f,end):
 				#s=compemail.split('@')[0].strip()
 				randint=randomNumber(2)
 				randint=int(randint)+5
-				while randint >= len(randomNames):
-					randint=randint-1
+				while randint >= len(randomNames) or randint<0:
+					rx=int(randomNumber(1))
+					if randint>0:
+						randint=randint- rx
+					else:
+						randint=randint+ rx
+
 				s=randomNames[randint]+'_'+randomNumber(5)
 		else:
 			s=name+str(u)+sufx
@@ -184,7 +201,8 @@ for u in range(f,end):
 		if len(s) > 25:
 			s=s[0:25]
 
-		da="user[name]=Egy+Bots&user[username]="+s+"&1=iiiiiiiiiiiiiiiiiiiiiiii&user[email]="+encodedEmail+"&user[password]="+pas+"&user[password_confirmation]="+pas
+		data_name=stripNum(s)+sufx
+		da="user[name]="+data_name+"s&user[username]="+s+"&1=iiiiiiiiiiiiiiiiiiiiiiii&user[email]="+encodedEmail+"&user[password]="+pas+"&user[password_confirmation]="+pas
 		noerror=False
 		r=''
 		while noerror==False:
@@ -209,7 +227,7 @@ for u in range(f,end):
 			reg=True
 		
 		elif  'redirect_path":"/users/sign_in","errors":{}}' in r.text :
-			print stx.Green+'Register  succeeded  ['+compemail+"]\n"
+			print stx.Green+'Register  succeeded "'+data_name+'"" >  ['+compemail+"]\n"
 			#x.append(s)
 			reg =True
 			ids=s+'@'+ea+':'+pas+'\n'
